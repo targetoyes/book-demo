@@ -19,7 +19,7 @@ class DemoViewSet(viewsets.ModelViewSet):
 
     @list_route(methods=['get', 'post'])                      
     def touch(self, request):
-	os.system('touch /tmp/abc')
+        os.system('touch /tmp/abc')
         return Response({'msg': '/tmp/abc has been touched'})
 
     @list_route(methods=['get', 'post'])                      
@@ -83,6 +83,6 @@ class DemoViewSet(viewsets.ModelViewSet):
         (status, output) = commands.getstatusoutput(comm)
         print status
         if status != 0:
-            return Response({'msg': '{0} has not been touched'.format('ggg'), 'output': output})
-        return Response({'msg': '{0} has been touched'.format('ggg'), 'output': output})
+            return Response({'msg': '{0} has not been touched'.format(request.data['filename']), 'output': output})
+        return Response({'msg': '{0} has been touched'.format(request.data['filename']), 'output': output})
 

@@ -18,5 +18,7 @@ urlpatterns = [
 
 
 urlpatterns += [
-        # url(r'^ip_info_main', ip_info_main),
+        url(r'^demo_static/', demo_static),
+        url(r'^demo_ansible/', demo_ansible),
+        url(r'^demo_ansible_with_vars/', demo_ansible_with_vars),
 ]

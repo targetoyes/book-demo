@@ -1,0 +1,14 @@
+{% extends "normal/base.html" %}
+
+{% load staticfiles %}
+{% block title %}demo_with_vars{% endblock %}
+
+{% block content %}
+{% include "demo/demo_test2.html" %}
+{% endblock %}
+
+{% block chosen_js_file %}
+<script type="text/javascript" src="{% static 'js/angular-controller/demo_ansible/demo_test2_ctrl.js' %}"></script>
+<!-- end -->
+
+{% endblock %}

@@ -10,36 +10,24 @@
         <meta name="author" content="">
         <!--append watch to the browser URL, then refresh the page. -->
         <link href="{% static 'css/libs/bootstrap.min.css' %}" rel="stylesheet">
-        <link href="{% static 'css/libs/font-awesome.min.css' %}" rel="stylesheet">
-        <link href="{% static 'css/libs/checkboxes.css' %}" rel="stylesheet">
-        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->  
-        <!--[if lt IE 9]>    
-        <script src="js/html5shiv.js"></script>  
-        <![endif]-->  
-        <!-- Fav and touch icons -->  
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">  
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">  
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">  
-        <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">  
     </head>    
-    <body id="addroute">
+    <body ng-app="myApp">
         <div class="container-fluid">
             <div class="col-md-12 column">
             </div>
             {% block content %}{% endblock %}
         </div>
     
-    <!-- put here load faster -->
-    <!-- here is the main js file that should be load -->
-    <script src="{% static 'less/less.js' %}" type="text/javascript"></script>
-    <script type="text/javascript" src="{% static 'js/libs/jquery/jquery.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/libs/angular/angular.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/libs/underscore/Underscore.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/libs/bootstrap/ui-bootstrap-tpls-0.11.2.js' %}"></script>
+        <!-- put here load faster -->
+        <!-- here is the main js file that should be load -->
+        <script type="text/javascript" src="{% static 'js/libs/jquery/jquery.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/libs/angular/angular.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/libs/bootstrap/bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/libs/underscore/Underscore.js' %}"></script>
 
-    <script type="text/javascript" src="{% static 'js/angular-factory/short-main.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/angular-factory/main.js' %}"></script>
 
-    <!-- here is the other page's js -->
-    {% block chosen_js_file %}{% endblock %}
+        <!-- here is the other page's js -->
+        {% block chosen_js_file %}{% endblock %}
     </body>
 </html>

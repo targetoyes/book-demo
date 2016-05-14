@@ -1,5 +1,5 @@
-var app = angular.module('myApp', ['ngResource','ipCookie', 'angularUtils.directives.dirPagination', 'ui.bootstrap','ui.router','ui.ace','angular-md5','base64']);
-    app.config(function($interpolateProvider) { 
+var app = angular.module('myApp', []);
+    app.config(function($interpolateProvider) {
       $interpolateProvider.startSymbol('((');
       $interpolateProvider.endSymbol('))');
     });
